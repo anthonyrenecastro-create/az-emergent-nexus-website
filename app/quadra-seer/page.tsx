@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Quadra-Seer Sovereign — your AI, on your machine",
+  description:
+    "Quadra-Seer Sovereign is a private, local-first AI system with persistent memory, powered by your own Ollama. $14.99/mo license — no cloud required, no data leaves your device.",
+};
 
 const checkoutUrl = process.env.NEXT_PUBLIC_QUADRA_SEER_CHECKOUT_URL?.trim();
 const supportEmail = "anthony.castro@axiomzetainnovations.com";
