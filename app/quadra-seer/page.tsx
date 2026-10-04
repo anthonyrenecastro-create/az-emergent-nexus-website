@@ -21,7 +21,7 @@ const included = [
     index: "02",
     title: "Your personal license key",
     description:
-      "Emailed after checkout. Keys are cryptographically signed and verified offline — the app never phones home to check them.",
+      "Emailed after checkout. Keys are cryptographically signed. A single one-time activation binds your key to your machine (up to 3 machines per license); after that the app verifies fully offline and never phones home.",
   },
   {
     index: "03",
@@ -58,7 +58,7 @@ const requirements = [
 const faqs = [
   {
     q: "Where does my data go?",
-    a: "Nowhere. Quadra-Seer runs entirely on your machine — chat, memory, and models stay local. There is no cloud account, no telemetry by default, and the license key is verified offline.",
+    a: "Nowhere. Quadra-Seer runs entirely on your machine — chat, memory, and models stay local. There is no cloud account and no telemetry by default. Your license key is activated once, then verified offline — nothing leaves your device during daily use.",
   },
   {
     q: "Do I need to be technical?",
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "What happens if I cancel?",
-    a: "Your local system keeps running — nothing is taken away from your machine. You simply stop receiving updates and support when the subscription ends.",
+    a: "Your system keeps running through the end of your paid period. After that, the local app will not start again until the license is renewed. Nothing is ever removed from your machine — your data and configuration stay yours.",
   },
   {
     q: "How do I receive my license key?",
@@ -179,11 +179,9 @@ export default function QuadraSeerPage() {
           <div className="console-intro">
             <span className="console-mark" aria-hidden="true">...</span>
             <p>
-              Your license key is verified offline inside the app — no license server, no
-              activation call, no telemetry. If Axiom Zeta disappeared tomorrow, your
-              system would keep running. That is the point.
+              One call, then never again. Activating your license makes a single request to a small license server, binding your key to your machine. After that, verification is fully offline — no recurring license checks, no telemetry. If Axiom Zeta disappeared tomorrow, your activated system would keep running through the end of its license term.
             </p>
-            <span className="console-status">No phone-home</span>
+            <span className="console-status">One-time activation, then offline</span>
           </div>
         </section>
 
