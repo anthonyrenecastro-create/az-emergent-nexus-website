@@ -146,6 +146,7 @@ export default async function HomePage() {
           </a>
           <div className="hero-actions">
             <a className="primary-link" href="#systems">Explore systems</a>
+            <a className="secondary-link" href="/quadra-seer">Quadra-Seer Sovereign</a>
             <a className="secondary-link" href="#transcendental-gateways">Transcendental Gateways</a>
             <a className="secondary-link" href="#coming-soon">Coming soon</a>
             <a className="secondary-link" href="#access">Access protocol</a>
