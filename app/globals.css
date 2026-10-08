@@ -125,8 +125,11 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
 .hero-portal:hover .portal-interface, .hero-portal:focus-visible .portal-interface { background: rgba(54,10,78,.72); box-shadow: 0 0 58px rgba(255,79,200,.62), inset 0 0 38px rgba(255,255,255,.16); }
 .hero-portal:hover .portal-label, .hero-portal:focus-visible .portal-label { color: #fff; }
 .gateway-portal { height: min(72vw, 640px); margin: 28px auto 0; max-width: 640px; position: relative; width: min(72vw, 640px); }
-.gateway-portal .portal-interface { height: 48%; padding: 0 10%; width: 48%; }
-.gateway-portal .portal-interface strong { font-size: clamp(13px, 2.4vw, 24px); line-height: 1.05; max-width: 100%; min-width: 0; overflow-wrap: break-word; }
+/* Cancel .hero-portal's absolute-positioning leftovers (left/top/transform) so the
+   gateway portal sits in normal flow, centered below the section heading. */
+.hero-portal.gateway-portal { left: auto; top: auto; transform: none; }
+.gateway-portal .portal-interface { height: 48%; padding: 0 5%; width: 48%; }
+.gateway-portal .portal-interface strong { font-size: clamp(11px, 2.2vw, 22px); line-height: 1.05; max-width: 100%; min-width: 0; overflow-wrap: normal; }
 .gateway-portal .portal-label { max-width: calc(100% - 24px); text-align: center; white-space: normal; }
 @keyframes sigil-breathe { 0%, 100% { margin-top: 0; } 50% { margin-top: -8px; } }
 @keyframes orbit-one { to { transform: translate(-50%, -50%) rotate(344deg); } }
