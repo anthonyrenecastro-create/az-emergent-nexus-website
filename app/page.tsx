@@ -329,6 +329,53 @@ export default async function HomePage() {
           </div>
         </section>
 
+        <section className="section live-systems" id="live-systems">
+          <div className="section-heading">
+            <div>
+              <span className="section-label">Active systems / live signal</span>
+              <h2 className="section-title">Live now.</h2>
+            </div>
+            <p className="section-note">Shipped applications, running in the open. Enter and use them.</p>
+          </div>
+
+          <div className="experience-destinations" aria-label="Live applications">
+            <article className="experience-destination">
+              <span>System / 01</span>
+              <strong>Quadra-M.I.N.D. Sight</strong>
+              <em className="experience-subtitle">Meditation and inner-sight practice</em>
+              <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginTop: 8 }}>
+                A guided meditation companion for crossing beyond the familiar — live on the web and in Play review.
+              </p>
+              <a
+                href="https://quadra-mind-sight.onrender.com"
+                rel="noreferrer"
+                target="_blank"
+                className="experience-pending"
+                style={{ textDecoration: "none" }}
+              >
+                Enter the system -&gt;
+              </a>
+            </article>
+            <article className="experience-destination">
+              <span>System / 02</span>
+              <strong>EqualiF.I. Planner</strong>
+              <em className="experience-subtitle">Financial independence planning</em>
+              <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginTop: 8 }}>
+                A focused tool for mapping the path to financial independence — clear numbers, no noise.
+              </p>
+              <a
+                href="https://equalifi-planner.vercel.app"
+                rel="noreferrer"
+                target="_blank"
+                className="experience-pending"
+                style={{ textDecoration: "none" }}
+              >
+                Enter the system -&gt;
+              </a>
+            </article>
+          </div>
+        </section>
+
         <section className="section coming-soon" id="coming-soon">
           <div className="section-heading">
             <div>
