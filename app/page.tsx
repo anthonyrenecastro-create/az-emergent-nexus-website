@@ -224,7 +224,7 @@ export default async function HomePage() {
 
           <a
             className="featured-experience"
-            href="https://transcendentalprescience.com"
+            href="https://axiom-and-ash.com"
             rel="noreferrer"
             target="_blank"
           >
