@@ -207,10 +207,16 @@ export default async function HomePage() {
               <span className="section-label">Emergent interface / new signal</span>
               <h2 className="section-title">The S.I.G.H.T. Zone.</h2>
             </div>
-            <p className="section-note">A new portal is taking shape. Access coordinates will be established next.</p>
+            <p className="section-note">The archive is live — enter the signal.</p>
           </div>
 
-          <div className="sight-zone-portal" aria-label="The S.I.G.H.T. Zone portal is awaiting access coordinates">
+          <a
+            className="sight-zone-portal"
+            href="https://them0deyeseer.com"
+            rel="noreferrer"
+            target="_blank"
+            aria-label="Enter The S.I.G.H.T. Zone archive at them0deyeseer.com"
+          >
             <span className="sight-zone-orbit sight-zone-orbit-outer" aria-hidden="true" />
             <span className="sight-zone-orbit sight-zone-orbit-inner" aria-hidden="true" />
             <span className="sight-zone-axis sight-zone-axis-horizontal" aria-hidden="true" />
@@ -218,9 +224,9 @@ export default async function HomePage() {
             <div className="sight-zone-interface">
               <span>Nexus interface / S.I.G.H.T.</span>
               <strong>The S.I.G.H.T.<br />Zone</strong>
-              <em>Coordinates pending</em>
+              <em>Live / Enter below</em>
             </div>
-          </div>
+          </a>
 
           <a
             className="featured-experience"
