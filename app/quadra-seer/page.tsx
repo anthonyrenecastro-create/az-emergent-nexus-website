@@ -4,10 +4,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Quadra-Seer Sovereign — your AI, on your machine",
   description:
-    "Quadra-Seer Sovereign is a private, local-first AI system with persistent memory, powered by your own Ollama. $14.99/mo license — no cloud required, no data leaves your device.",
+    "Quadra-Seer Sovereign is a private, local-first AI system with persistent memory, powered by your own Ollama. Free and open source — no cloud required, no data leaves your device.",
 };
 
-const checkoutUrl = process.env.NEXT_PUBLIC_QUADRA_SEER_CHECKOUT_URL?.trim();
+const sourceRepo = "https://github.com/Axiom-Zeta-Innovations-LLC/quadra-seer-equalibra-sovereign";
 const supportEmail = "anthony.castro@axiomzetainnovations.com";
 
 const included = [
@@ -19,21 +19,21 @@ const included = [
   },
   {
     index: "02",
-    title: "Your personal license key",
+    title: "Complete source code",
     description:
-      "Emailed after checkout. Keys are cryptographically signed. A single one-time activation binds your key to your machine (up to 3 machines per license); after that the app verifies fully offline and never phones home.",
+      "Every line is yours to read, run, and modify. Clone the repository and build it yourself — no binaries you can't inspect.",
   },
   {
     index: "03",
     title: "Guided setup",
     description:
-      "Installers for Mac, Windows, and Linux, plus a step-by-step guide. One command brings the whole stack up on your machine.",
+      "Installers for Mac, Windows, and Linux, plus a step-by-step runbook. One command brings the whole stack up on your machine.",
   },
   {
     index: "04",
-    title: "Updates while subscribed",
+    title: "Community updates",
     description:
-      "Every improvement ships to license holders first. Stay subscribed and your local system keeps getting better.",
+      "Every improvement lands in the public repository. Pull, rebuild, and your local system keeps getting better — free forever.",
   },
 ];
 
@@ -58,19 +58,19 @@ const requirements = [
 const faqs = [
   {
     q: "Where does my data go?",
-    a: "Nowhere. Quadra-Seer runs entirely on your machine — chat, memory, and models stay local. There is no cloud account and no telemetry by default. Your license key is activated once, then verified offline — nothing leaves your device during daily use.",
+    a: "Nowhere. Quadra-Seer runs entirely on your machine — chat, memory, and models stay local. There is no cloud account and no telemetry by default. Nothing leaves your device during daily use.",
   },
   {
     q: "Do I need to be technical?",
     a: "Comfortable with a terminal helps. Installation is a guided script plus one command (./scripts/stack.sh local up). If you can install Docker and Ollama, you can run Quadra-Seer.",
   },
   {
-    q: "What happens if I cancel?",
-    a: "Your system keeps running through the end of your paid period. After that, the local app will not start again until the license is renewed. Nothing is ever removed from your machine — your data and configuration stay yours.",
+    q: "What does it cost?",
+    a: "Nothing. Quadra-Seer is free and open source — no subscription, no license key, no activation server. Download it, run it, keep it.",
   },
   {
-    q: "How do I receive my license key?",
-    a: "By email, shortly after checkout. Keep it safe — it is your proof of license for downloads and updates.",
+    q: "Where is the source code?",
+    a: "In the public Axiom Zeta Innovations repository on GitHub. Clone it, read every line, modify what you want, and build it yourself.",
   },
 ];
 
@@ -99,45 +99,36 @@ export default function QuadraSeerPage() {
             <h1>Your AI,<br /><span className="hero-highlight">on your machine.</span></h1>
             <p className="hero-lede">
               A private AI system with persistent memory — powered by your own Ollama.
-              No cloud required. No data leaves the device.
+              Free and open source. No cloud required. No data leaves the device.
             </p>
           </div>
           <div className="hero-actions">
-            {checkoutUrl ? (
-              <a className="primary-link" href={checkoutUrl} rel="noreferrer" target="_blank">
-                Get Quadra-Seer — $14.99/mo →
-              </a>
-            ) : (
-              <a
-                className="primary-link"
-                href={`mailto:${supportEmail}?subject=${encodeURIComponent("Quadra-Seer Sovereign — license request")}`}
-              >
-                Request access →
-              </a>
-            )}
+            <a className="primary-link" href={sourceRepo} rel="noreferrer" target="_blank">
+              Get the source →
+            </a>
             <a className="secondary-link" href="#included">What&apos;s included</a>
             <a className="secondary-link" href="#requirements">Requirements</a>
           </div>
           <div className="hero-readout" aria-hidden="true">
-            <span>$14.99 / month</span>
-            <span>Cancel anytime</span>
-            <span>License key by email</span>
+            <span>Free forever</span>
+            <span>Open source</span>
+            <span>No account needed</span>
           </div>
         </section>
 
         <div className="signal-strip">
-          <div className="signal"><strong>01 / Subscribe</strong><span>Check out securely via Stripe. $14.99 per month, cancel anytime.</span></div>
-          <div className="signal"><strong>02 / License key</strong><span>Your personal key arrives by email — signed, offline-verifiable.</span></div>
-          <div className="signal"><strong>03 / Run locally</strong><span>Download the bundle, run one command, and talk to your own machine.</span></div>
+          <div className="signal"><strong>01 / Download</strong><span>Clone the public repository — free, no sign-up, no key.</span></div>
+          <div className="signal"><strong>02 / Run locally</strong><span>One command brings up the whole stack on your machine.</span></div>
+          <div className="signal"><strong>03 / Own it</strong><span>Read every line, modify what you want. It&apos;s yours.</span></div>
         </div>
 
         <section className="section" id="included">
           <div className="section-heading">
             <div>
-              <span className="section-label">Quadra-Seer Sovereign / license</span>
-              <h2 className="section-title">What your subscription includes.</h2>
+              <span className="section-label">Quadra-Seer Sovereign / open source</span>
+              <h2 className="section-title">What you get.</h2>
             </div>
-            <p className="section-note">One subscription. The whole system, running on hardware you own.</p>
+            <p className="section-note">Free forever. The whole system, running on hardware you own.</p>
           </div>
           <div className="crypto-app-grid" aria-label="What is included">
             {included.map((item) => (
@@ -173,15 +164,15 @@ export default function QuadraSeerPage() {
           <div className="section-heading">
             <div>
               <span className="section-label">Quadra-Seer Sovereign / principle</span>
-              <h2 className="section-title">Sovereign, down to the license.</h2>
+              <h2 className="section-title">Sovereign, down to the source.</h2>
             </div>
           </div>
           <div className="console-intro">
             <span className="console-mark" aria-hidden="true">...</span>
             <p>
-              One call, then never again. Activating your license makes a single request to a small license server, binding your key to your machine. After that, verification is fully offline — no recurring license checks, no telemetry. If Axiom Zeta disappeared tomorrow, your activated system would keep running through the end of its license term.
+              No license server. No activation key. No account. You clone the repository, build it on your own hardware, and it runs — fully offline, with no recurring checks and no telemetry. If Axiom Zeta disappeared tomorrow, your system would keep running, and the source would still be yours to fork.
             </p>
-            <span className="console-status">One-time activation, then offline</span>
+            <span className="console-status">Free software, running on your machine</span>
           </div>
         </section>
 
@@ -204,18 +195,15 @@ export default function QuadraSeerPage() {
             ))}
           </div>
           <div className="hero-actions" style={{ marginTop: 40 }}>
-            {checkoutUrl ? (
-              <a className="primary-link" href={checkoutUrl} rel="noreferrer" target="_blank">
-                Get Quadra-Seer — $14.99/mo →
-              </a>
-            ) : (
-              <a
-                className="primary-link"
-                href={`mailto:${supportEmail}?subject=${encodeURIComponent("Quadra-Seer Sovereign — license request")}`}
-              >
-                Request access →
-              </a>
-            )}
+            <a className="primary-link" href={sourceRepo} rel="noreferrer" target="_blank">
+              Get the source →
+            </a>
+            <a
+              className="secondary-link"
+              href={`mailto:${supportEmail}?subject=${encodeURIComponent("Quadra-Seer Sovereign — question")}`}
+            >
+              Ask a question →
+            </a>
           </div>
         </section>
       </main>
