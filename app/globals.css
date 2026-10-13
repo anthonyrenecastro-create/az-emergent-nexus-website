@@ -209,6 +209,9 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
 .paper-author-image img { object-fit: cover; object-position: center 28%; }
 .paper-authors { color: var(--cyan); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; margin: 0; text-transform: uppercase; }
 .paper-description { color: var(--muted); line-height: 1.5; margin: 18px 0 0; }
+.theory-points { color: var(--muted); display: flex; flex-direction: column; gap: 14px; line-height: 1.55; list-style: none; margin: 18px 0 0; padding: 0; }
+.theory-points li { padding-left: 4px; }
+.theory-note { border-top: 1px solid var(--line); color: var(--gold-bright); font-size: .92rem; line-height: 1.55; margin: 18px 0 0; padding-top: 16px; }
 .paper-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 28px; }
 .paper-links a { align-items: center; border: 1px solid var(--line); color: var(--gold-bright); display: inline-flex; font-family: 'DM Mono', monospace; font-size: 10px; gap: 8px; letter-spacing: .08em; padding: 9px 10px; text-decoration: none; text-transform: uppercase; transition: border-color .2s ease, color .2s ease; }
 .paper-links a:hover { border-color: var(--gold); color: #fff; }
