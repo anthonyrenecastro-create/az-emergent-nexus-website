@@ -209,6 +209,10 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
 .paper-author-image img { object-fit: cover; object-position: center 28%; }
 .paper-authors { color: var(--cyan); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; margin: 0; text-transform: uppercase; }
 .paper-description { color: var(--muted); line-height: 1.5; margin: 18px 0 0; }
+.theory-grid { display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 12px; }
+.theory-card h3 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); margin: 18px 0 6px; max-width: none; }
+.theory-image { aspect-ratio: 1 / 1; margin: 18px 0 0; overflow: hidden; position: relative; }
+.theory-image img { object-fit: cover; }
 .theory-points { color: var(--muted); display: flex; flex-direction: column; gap: 14px; line-height: 1.55; list-style: none; margin: 18px 0 0; padding: 0; }
 .theory-points li { padding-left: 4px; }
 .theory-note { border-top: 1px solid var(--line); color: var(--gold-bright); font-size: .92rem; line-height: 1.55; margin: 18px 0 0; padding-top: 16px; }
@@ -355,6 +359,7 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
   .hero-portal { height: min(78vw, 580px); top: 52%; width: min(78vw, 580px); }
   .hero-actions { bottom: 54px; flex-wrap: wrap; justify-content: center; width: calc(100% - 40px); }
   .hero-readout { display: none; }
+  .theory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 720px) {
@@ -387,6 +392,7 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
   .console-intro { align-items: flex-start; flex-wrap: wrap; }
   .console-status { margin-left: 0; width: 100%; }
   .paper-grid { grid-template-columns: 1fr; }
+  .theory-grid { grid-template-columns: 1fr; }
   .product-grid { grid-template-columns: 1fr; }
   .product-card { min-height: 0; }
   .cart-page { padding-left: 20px; padding-right: 20px; padding-top: 70px; }
