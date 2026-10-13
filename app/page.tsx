@@ -39,51 +39,56 @@ const cryptoApps = [
   },
 ];
 
-type PhysicsPaper = {
+type Theory = {
   index: string;
   title: string;
-  authors: string;
-  description: string;
-  image?: string;
-  links: { label: string; href: string }[];
+  points: string[];
+  note?: string;
 };
 
-const physicsPapers: PhysicsPaper[] = [
+const theories: Theory[] = [
   {
     index: "01",
-    title: "Shared physics research",
-    authors: "Anthony Castro + Abby Lane",
-    description: "A growing archive of papers exploring matter, perception, and the structures that connect them.",
-    links: [
-      { label: "Zenodo", href: "https://zenodo.org/search?q=Anthony%20Castro%20Abby%20Lane" },
-      { label: "arXiv", href: "https://arxiv.org/search/?query=Anthony+Castro+Abby+Lane&searchtype=all" },
-      { label: "GitHub repos", href: "https://github.com/search?q=Anthony+Castro+Abby+Lane&type=repositories" },
+    title: "Interplayed Field Theory",
+    points: [
+      "Unified Field Interactions: Interplayed Field Theory (IFT) proposes a mathematical framework connecting quantum, classical, and macroscopic dynamics through ten coupled nonlinear partial differential equations.",
+      "Resonance and Emergence: IFT models how interacting fields generate coherent structures, synchronized oscillations, stable patterns, and emergent organization through nonlinear resonance and energy redistribution.",
+      "Geometry and Topology: IFT incorporates higher-dimensional mathematical structures, tensor coupling, recursive dynamics, and complex manifold topology to describe how geometry influences field evolution and stability.",
+      "Cross-Disciplinary Applications: IFT seeks to provide a common mathematical foundation for studying plasma propulsion, energy transfer, advanced materials, biological systems, and artificial intelligence, with its broader physical predictions requiring experimental validation.",
     ],
   },
   {
     index: "02",
-    title: "Anthony Rene Castro",
-    authors: "Independent research trail",
-    description: "Follow the papers, preprints, and working repositories behind the Nexus line of inquiry.",
-    links: [
-      { label: "Zenodo", href: "https://zenodo.org/search?q=Anthony%20Castro" },
-      { label: "arXiv", href: "https://arxiv.org/search/?query=Anthony+Castro&searchtype=all" },
-      { label: "GitHub repos", href: "https://github.com/search?q=Anthony+Castro&type=repositories" },
+    title: "Helical Recursive Manifold Theory",
+    points: [
+      "Unified Computational Architecture: Helical Recursive Manifold (HRM) combines information fields, geometry, topology, memory, cognition, hierarchy, and resource management into one adaptive mathematical framework.",
+      "Self-Organizing Computation: HRM is designed to dynamically reorganize information pathways, adjust computational structures, retain memories, and allocate processing resources according to changing demands.",
+      "Stability and Accountability: Every computational change is mathematically tracked, while bounded correction mechanisms are designed to maintain stability, support recovery, and prevent uncontrolled structural adaptation.",
+      "Scientific Validation: HRM establishes a falsifiable theoretical foundation for adaptive computation, with controlled experiments designed to determine whether it improves efficiency, reasoning-related performance, and resilience compared with conventional architectures.",
     ],
   },
   {
     index: "03",
-    title: "Abby Lane",
-    authors: "Independent research trail",
-    description: "A parallel index for Abby Lane's papers, preprints, and experimental code.",
-    image: "/public.abby-lane.jpg",
-    links: [
-      { label: "Zenodo", href: "https://zenodo.org/search?q=Abby%20Lane" },
-      { label: "arXiv", href: "https://arxiv.org/search/?query=Abby+Lane&searchtype=all" },
-      { label: "GitHub repos", href: "https://github.com/search?q=Abby+Lane&type=repositories" },
+    title: "Hieromath",
+    points: [
+      "Semantic Mathematical Objects: Hieromath extends conventional mathematical objects by incorporating numerical value, identity, category, relationships, contextual meaning, constraints, and state into unified mathematical structures.",
+      "Conditional Mathematical Operations: Rather than performing arithmetic solely on numerical values, Hieromath introduces operations governed by semantic compatibility, relational constraints, and explicitly defined transformation rules.",
+      "Transformational Computational Algebra: Hieromath employs operations such as COUPLE, BIND, INHIBIT, PROJECT, PROPAGATE, and COLLAPSE to manipulate interconnected mathematical structures while checking their required invariants.",
+      "Intelligent Mathematical Execution: Hieromath proposes a computational mathematics paradigm in which incompatible operations are rejected before execution, valid transformations propagate through dependency graphs, and results are verified and recorded for reproducibility.",
+    ],
+    note: "Central distinction: Hieromath aims to make mathematics operate on both quantities and formally defined relationships, rather than quantities alone; its status as a genuinely new mathematical foundation remains to be established through formal proofs and independent validation.",
+  },
+  {
+    index: "04",
+    title: "Multi Model Recursive Multiverse Theory",
+    points: [
+      "Unified Physical Framework: The Multi-Modal Unified Recursion Multiverse Theory proposes a mathematical framework connecting quantum mechanics, classical physics, geometry, and information processing through ten coupled nonlinear equations.",
+      "Multiverse Architecture: The model proposes 22 interconnected realities, 12 spatial dimensions, 14 timelines per reality, and four branches per timeline, organized through recursive mathematical structures.",
+      "Force Projection and Waveform Bridging: The theory suggests that fundamental forces emerge as projections of higher-dimensional phenomena, with resonant coupling enabling interactions across different physical scales.",
+      "Scientific and Technological Applications: The framework explores potential advances in artificial intelligence, quantum computing, materials science, and cosmology, with its broader predictions requiring further independent validation.",
     ],
   },
-] as const;
+];
 
 export default async function HomePage() {
   let products: Product[] = [];
@@ -298,38 +303,28 @@ export default async function HomePage() {
               <span className="section-label">Research archive / active signal</span>
               <h2 className="section-title">The Seer&apos;s Console</h2>
             </div>
-            <p className="section-note">Physics papers, preprints, and the code that lets the questions keep moving.</p>
+            <p className="section-note">Theoretical frameworks behind the Nexus line of inquiry.</p>
           </div>
 
           <div className="console-intro">
             <span className="console-mark" aria-hidden="true">...</span>
-            <p>Anthony Castro and Abby Lane / a shared observatory for the work behind the signal.</p>
+            <p>Anthony Castro / a shared observatory for the work behind the signal.</p>
             <span className="console-status">Index / live</span>
           </div>
 
-          <div className="paper-grid" aria-label="Physics paper archive">
-            {physicsPapers.map((paper) => (
-              <article className="paper-card" key={paper.index}>
+          <div className="paper-grid" aria-label="Theoretical frameworks">
+            {theories.map((theory) => (
+              <article className="paper-card" key={theory.index}>
                 <div className="paper-card-top">
-                  <span className="paper-index">Paper / {paper.index}</span>
-                  <span className="paper-status">Archive link</span>
+                  <span className="paper-index">Theory / {theory.index}</span>
                 </div>
-                <h3>{paper.title}</h3>
-                {paper.image && (
-                  <div className="paper-author-image">
-                    <Image src={paper.image} alt={`${paper.title} portrait`} fill sizes="(max-width: 720px) 100vw, 33vw" />
-                  </div>
-                )}
-                <p className="paper-authors">{paper.authors}</p>
-                <p className="paper-description">{paper.description}</p>
-                <div className="paper-links">
-                  {paper.links.map((link) => (
-                    <a href={link.href} key={link.label} rel="noreferrer" target="_blank">
-                      <span>{link.label}</span>
-                      <span aria-hidden="true">-&gt;</span>
-                    </a>
+                <h3>{theory.title}</h3>
+                <ol className="theory-points">
+                  {theory.points.map((point, i) => (
+                    <li key={i}>{point}</li>
                   ))}
-                </div>
+                </ol>
+                {theory.note && <p className="theory-note">{theory.note}</p>}
               </article>
             ))}
           </div>
