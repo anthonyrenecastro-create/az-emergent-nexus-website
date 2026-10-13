@@ -42,6 +42,7 @@ const cryptoApps = [
 type Theory = {
   index: string;
   title: string;
+  image: string;
   points: string[];
   note?: string;
 };
@@ -50,42 +51,46 @@ const theories: Theory[] = [
   {
     index: "01",
     title: "Interplayed Field Theory",
+    image: "/theory-ift.webp",
     points: [
-      "Unified Field Interactions: Interplayed Field Theory (IFT) proposes a mathematical framework connecting quantum, classical, and macroscopic dynamics through ten coupled nonlinear partial differential equations.",
-      "Resonance and Emergence: IFT models how interacting fields generate coherent structures, synchronized oscillations, stable patterns, and emergent organization through nonlinear resonance and energy redistribution.",
-      "Geometry and Topology: IFT incorporates higher-dimensional mathematical structures, tensor coupling, recursive dynamics, and complex manifold topology to describe how geometry influences field evolution and stability.",
-      "Cross-Disciplinary Applications: IFT seeks to provide a common mathematical foundation for studying plasma propulsion, energy transfer, advanced materials, biological systems, and artificial intelligence, with its broader physical predictions requiring experimental validation.",
+      "Unified Field Interactions: IFT connects quantum, classical, and macroscopic dynamics through ten coupled nonlinear PDEs.",
+      "Resonance and Emergence: interacting fields generate coherent structures, synchronized oscillations, and emergent order through nonlinear resonance.",
+      "Geometry and Topology: higher-dimensional structures, tensor coupling, and manifold topology shape how fields evolve and stabilize.",
+      "Cross-Disciplinary Applications: a common mathematical foundation for plasma propulsion, energy transfer, materials, biology, and AI — predictions await experimental validation.",
     ],
   },
   {
     index: "02",
     title: "Helical Recursive Manifold Theory",
+    image: "/theory-hrm.webp",
     points: [
-      "Unified Computational Architecture: Helical Recursive Manifold (HRM) combines information fields, geometry, topology, memory, cognition, hierarchy, and resource management into one adaptive mathematical framework.",
-      "Self-Organizing Computation: HRM is designed to dynamically reorganize information pathways, adjust computational structures, retain memories, and allocate processing resources according to changing demands.",
-      "Stability and Accountability: Every computational change is mathematically tracked, while bounded correction mechanisms are designed to maintain stability, support recovery, and prevent uncontrolled structural adaptation.",
-      "Scientific Validation: HRM establishes a falsifiable theoretical foundation for adaptive computation, with controlled experiments designed to determine whether it improves efficiency, reasoning-related performance, and resilience compared with conventional architectures.",
+      "Unified Computational Architecture: HRM unites information fields, geometry, topology, memory, cognition, and resource management in one adaptive framework.",
+      "Self-Organizing Computation: pathways, structures, memories, and resources reorganize dynamically as demands change.",
+      "Stability and Accountability: every change is tracked; bounded corrections maintain stability and prevent runaway adaptation.",
+      "Scientific Validation: a falsifiable foundation, with controlled experiments testing efficiency, reasoning performance, and resilience.",
     ],
   },
   {
     index: "03",
     title: "Hieromath",
+    image: "/theory-hieromath.webp",
     points: [
-      "Semantic Mathematical Objects: Hieromath extends conventional mathematical objects by incorporating numerical value, identity, category, relationships, contextual meaning, constraints, and state into unified mathematical structures.",
-      "Conditional Mathematical Operations: Rather than performing arithmetic solely on numerical values, Hieromath introduces operations governed by semantic compatibility, relational constraints, and explicitly defined transformation rules.",
-      "Transformational Computational Algebra: Hieromath employs operations such as COUPLE, BIND, INHIBIT, PROJECT, PROPAGATE, and COLLAPSE to manipulate interconnected mathematical structures while checking their required invariants.",
-      "Intelligent Mathematical Execution: Hieromath proposes a computational mathematics paradigm in which incompatible operations are rejected before execution, valid transformations propagate through dependency graphs, and results are verified and recorded for reproducibility.",
+      "Semantic Mathematical Objects: objects carry value, identity, category, relationships, meaning, constraints, and state.",
+      "Conditional Operations: operations governed by semantic compatibility and relational constraints, not just numerical value.",
+      "Transformational Algebra: COUPLE, BIND, INHIBIT, PROJECT, PROPAGATE, and COLLAPSE manipulate structures while checking invariants.",
+      "Intelligent Execution: incompatible operations are rejected before execution; valid transformations propagate and are verified for reproducibility.",
     ],
-    note: "Central distinction: Hieromath aims to make mathematics operate on both quantities and formally defined relationships, rather than quantities alone; its status as a genuinely new mathematical foundation remains to be established through formal proofs and independent validation.",
+    note: "Central distinction: mathematics operates on quantities and formally defined relationships — its status as a new foundation awaits formal proof and independent validation.",
   },
   {
     index: "04",
     title: "Multi Model Recursive Multiverse Theory",
+    image: "/theory-mmrm.webp",
     points: [
-      "Unified Physical Framework: The Multi-Modal Unified Recursion Multiverse Theory proposes a mathematical framework connecting quantum mechanics, classical physics, geometry, and information processing through ten coupled nonlinear equations.",
-      "Multiverse Architecture: The model proposes 22 interconnected realities, 12 spatial dimensions, 14 timelines per reality, and four branches per timeline, organized through recursive mathematical structures.",
-      "Force Projection and Waveform Bridging: The theory suggests that fundamental forces emerge as projections of higher-dimensional phenomena, with resonant coupling enabling interactions across different physical scales.",
-      "Scientific and Technological Applications: The framework explores potential advances in artificial intelligence, quantum computing, materials science, and cosmology, with its broader predictions requiring further independent validation.",
+      "Unified Physical Framework: connects quantum mechanics, classical physics, geometry, and information processing through ten coupled nonlinear equations.",
+      "Multiverse Architecture: 22 realities, 12 spatial dimensions, 14 timelines per reality, four branches per timeline — organized recursively.",
+      "Force Projection: fundamental forces emerge as projections of higher-dimensional phenomena, coupled resonantly across scales.",
+      "Applications: explores advances in AI, quantum computing, materials science, and cosmology — predictions require independent validation.",
     ],
   },
 ];
@@ -312,11 +317,14 @@ export default async function HomePage() {
             <span className="console-status">Index / live</span>
           </div>
 
-          <div className="paper-grid" aria-label="Theoretical frameworks">
+          <div className="theory-grid" aria-label="Theoretical frameworks">
             {theories.map((theory) => (
-              <article className="paper-card" key={theory.index}>
+              <article className="paper-card theory-card" key={theory.index}>
                 <div className="paper-card-top">
                   <span className="paper-index">Theory / {theory.index}</span>
+                </div>
+                <div className="theory-image">
+                  <Image src={theory.image} alt={`${theory.title} artwork`} fill sizes="(max-width: 720px) 100vw, 25vw" />
                 </div>
                 <h3>{theory.title}</h3>
                 <ol className="theory-points">
