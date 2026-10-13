@@ -302,6 +302,38 @@ export default async function HomePage() {
           </div>
         </section>
 
+        <section className="section" id="transcendent-recursion">
+          <div className="section-heading">
+            <div>
+              <span className="section-label">Emergent interface / creative signal</span>
+              <h2 className="section-title">Transcendent Recursion.</h2>
+            </div>
+            <p className="section-note">A multiverse in progress — books, sound, physics, and transmissions from the edge of the known self.</p>
+          </div>
+
+          <a
+            className="featured-experience"
+            href="https://transcendentrecursion.online"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div className="featured-experience-image">
+              <Image
+                src="/transcendent-recursion.webp"
+                alt="Transcendent Recursion"
+                fill
+                sizes="(max-width: 1240px) 100vw, 1176px"
+              />
+            </div>
+            <div className="featured-experience-copy">
+              <span className="section-label">The Transcendent Recursion</span>
+              <h3>A living body of work</h3>
+              <p>There is no outside. A story that keeps unfolding — into a novel, a score, a theory of everything, and a map back to the source.</p>
+              <span className="featured-experience-cta">Visit Transcendent Recursion</span>
+            </div>
+          </a>
+        </section>
+
         <section className="section seers-console" id="seers-console">
           <div className="section-heading">
             <div>
