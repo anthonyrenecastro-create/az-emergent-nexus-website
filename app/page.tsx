@@ -12,32 +12,7 @@ const hasShopifyConfiguration = Boolean(
     process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN?.trim()
 );
 
-const upcomingExperiences = [
-  {
-    name: "QuadraM.I.N.D.-Sight",
-    subtitle: "Founder-ready product architecture, mapped before build.",
-  },
-  {
-    name: "CONVERGENCE FORM EXTRACTOR",
-    subtitle: "Mind Forge 2.0",
-  },
-] as const;
-
 const substackLink = "https://substack.com/@anthonycastro33";
-const cryptoApps = [
-  {
-    name: "HyperCross Nexus",
-    description: "Core intelligence and strategy: analyze markets, portfolios, blockchain activity, DeFi, liquidity, risk, and trade setups through an explainable decision process.",
-  },
-  {
-    name: "HyperCross Nexus Arm Xero",
-    description: "The optional execution companion that prepares or executes approved strategies with authorization, position limits, routing, and transaction-level risk controls.",
-  },
-  {
-    name: "Ameterasu HCN Companion",
-    description: "The conversational interface for understanding Nexus analysis, portfolio exposure, signals, opportunities, and risk without acting as an autonomous trading engine.",
-  },
-];
 
 type Theory = {
   index: string;
@@ -157,8 +132,7 @@ export default async function HomePage() {
           <div className="hero-actions">
             <a className="primary-link" href="#systems">Explore systems</a>
             <a className="secondary-link" href="/quadra-seer">Quadra-Seer Sovereign</a>
-            <a className="secondary-link" href="#transcendental-gateways">Transcendental Gateways</a>
-            <a className="secondary-link" href="#coming-soon">Coming soon</a>
+            <a className="secondary-link" href="#seers-console">Seer&apos;s Console</a>
             <a className="secondary-link" href="#access">Access protocol</a>
           </div>
           <div className="hero-readout" aria-hidden="true">
@@ -173,43 +147,6 @@ export default async function HomePage() {
           <div className="signal"><strong>02 / Access</strong><span>Enter the experience and begin your next line of inquiry.</span></div>
           <div className="signal"><strong>03 / Enter</strong><span>Open your browser-based experience and begin.</span></div>
         </div>
-
-        <section className="section gateway-section" id="transcendental-gateways">
-          <div className="section-heading">
-            <div>
-              <span className="section-label">Nexus interface / gateway signal</span>
-              <h2 className="section-title">Transcendental Gateways</h2>
-            </div>
-            <p className="section-note">A portal for crossing beyond the familiar and entering the next layer of perception.</p>
-          </div>
-
-          <a
-            className="hero-portal gateway-portal"
-            href="https://transcendentalgateways.site"
-            rel="noreferrer"
-            target="_blank"
-            aria-label="Enter Transcendental Gateways"
-          >
-            <span className="portal-stars" />
-            <span className="portal-glow" />
-            <span className="sigil-ring sigil-ring-outer" />
-            <span className="sigil-ring sigil-ring-middle" />
-            <span className="sigil-ring sigil-ring-inner" />
-            <span className="sigil-cross sigil-cross-horizontal" />
-            <span className="sigil-cross sigil-cross-vertical" />
-            <span className="sigil-diamond" />
-            <span className="sigil-petal sigil-petal-one" />
-            <span className="sigil-petal sigil-petal-two" />
-            <span className="sigil-petal sigil-petal-three" />
-            <span className="sigil-petal sigil-petal-four" />
-            <span className="portal-interface">
-              <span className="portal-eyebrow">Nexus Interface</span>
-              <strong>Transcendental<br />Gateways</strong>
-              <span className="portal-status">Ready / Enter below</span>
-            </span>
-            <span className="portal-label">Enter Gateway</span>
-          </a>
-        </section>
 
         <section className="section" id="systems">
           <div className="section-heading">
@@ -417,37 +354,6 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section className="section coming-soon" id="coming-soon">
-          <div className="section-heading">
-            <div>
-              <span className="section-label">Systems in development</span>
-              <h2 className="section-title">Coming soon.</h2>
-            </div>
-            <p className="section-note">Experiences and applications preparing for their next access window.</p>
-          </div>
-
-          <div className="experience-destinations" aria-label="Experiences coming soon">
-            {upcomingExperiences.map((experience, index) => (
-              <article className="experience-destination" key={experience.name}>
-                <span>Experience / {String(index + 1).padStart(2, "0")}</span>
-                <strong>{experience.name}</strong>
-                <em className="experience-subtitle">{experience.subtitle}</em>
-                <span className="experience-pending">Coming Soon</span>
-              </article>
-            ))}
-          </div>
-
-          <div className="crypto-app-grid" aria-label="HyperCross applications coming soon">
-            {cryptoApps.map((app, index) => (
-              <article className="crypto-app" key={app.name}>
-                <span className="product-index">HyperCross / {String(index + 1).padStart(2, "0")}</span>
-                <h3>{app.name}</h3>
-                <p>{app.description}</p>
-                <span className="crypto-app-pending">Coming Soon</span>
-              </article>
-            ))}
-          </div>
-        </section>
       </main>
       <footer className="site-footer">AZ Emergent Nexus / Cognitive systems for the next version of you</footer>
     </div>
