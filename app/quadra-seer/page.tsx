@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Quadra-Seer Sovereign is a private, local-first AI system with persistent memory, powered by your own Ollama. Free and open source — no cloud required, no data leaves your device.",
 };
 
-const sourceRepo = "https://github.com/Axiom-Zeta-Innovations-LLC/quadra-seer-equalibra-sovereign";
+const sourceRepo = "https://github.com/E-L-L-I-A-Tech-Collaboration/quadra-seer-equalibra-sovereign";
 const supportEmail = "anthony.castro@axiomzetainnovations.com";
 
 const included = [
