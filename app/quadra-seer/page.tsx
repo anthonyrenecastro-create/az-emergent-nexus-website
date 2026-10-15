@@ -4,10 +4,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Quadra-Seer Sovereign — your AI, on your machine",
   description:
-    "Quadra-Seer Sovereign is a private, local-first AI system with persistent memory, powered by your own Ollama. Free and open source — no cloud required, no data leaves your device.",
+    "Quadra-Seer Sovereign is a private, local-first AI system with persistent memory, powered by your own Ollama. Free — no cloud required, no data leaves your device.",
 };
 
-const sourceRepo = "https://github.com/E-L-L-I-A-Tech-Collaboration/quadra-seer-equalibra-sovereign";
 const supportEmail = "anthony.castro@axiomzetainnovations.com";
 
 const included = [
@@ -19,9 +18,9 @@ const included = [
   },
   {
     index: "02",
-    title: "Complete source code",
+    title: "Self-contained system",
     description:
-      "Every line is yours to read, run, and modify. Clone the repository and build it yourself — no binaries you can't inspect.",
+      "Everything runs on your own hardware — no cloud services, no external dependencies, no telemetry.",
   },
   {
     index: "03",
@@ -31,9 +30,9 @@ const included = [
   },
   {
     index: "04",
-    title: "Community updates",
+    title: "Ongoing updates",
     description:
-      "Every improvement lands in the public repository. Pull, rebuild, and your local system keeps getting better — free forever.",
+      "Improvements ship as updates. Rebuild, and your local system keeps getting better — free forever.",
   },
 ];
 
@@ -66,11 +65,11 @@ const faqs = [
   },
   {
     q: "What does it cost?",
-    a: "Nothing. Quadra-Seer is free and open source — no subscription, no license key, no activation server. Download it, run it, keep it.",
+    a: "Nothing. Quadra-Seer is free — no subscription, no license key, no activation server. Download it, run it, keep it.",
   },
   {
-    q: "Where is the source code?",
-    a: "In the public Axiom Zeta Innovations repository on GitHub. Clone it, read every line, modify what you want, and build it yourself.",
+    q: "Is the source code public?",
+    a: "No — Quadra-Seer is proprietary software. You receive the complete working system; the source stays with Axiom Zeta.",
   },
 ];
 
@@ -99,33 +98,29 @@ export default function QuadraSeerPage() {
             <h1>Your AI,<br /><span className="hero-highlight">on your machine.</span></h1>
             <p className="hero-lede">
               A private AI system with persistent memory — powered by your own Ollama.
-              Free and open source. No cloud required. No data leaves the device.
+              Free. No cloud required. No data leaves the device.
             </p>
           </div>
           <div className="hero-actions">
-            <a className="primary-link" href={sourceRepo} rel="noreferrer" target="_blank">
-              Get the source →
-            </a>
             <a className="secondary-link" href="#included">What&apos;s included</a>
             <a className="secondary-link" href="#requirements">Requirements</a>
           </div>
           <div className="hero-readout" aria-hidden="true">
             <span>Free forever</span>
-            <span>Open source</span>
             <span>No account needed</span>
           </div>
         </section>
 
         <div className="signal-strip">
-          <div className="signal"><strong>01 / Download</strong><span>Clone the public repository — free, no sign-up, no key.</span></div>
+          <div className="signal"><strong>01 / Install</strong><span>Free, no sign-up, no key.</span></div>
           <div className="signal"><strong>02 / Run locally</strong><span>One command brings up the whole stack on your machine.</span></div>
-          <div className="signal"><strong>03 / Own it</strong><span>Read every line, modify what you want. It&apos;s yours.</span></div>
+          <div className="signal"><strong>03 / Own it</strong><span>Your data, your models, your hardware. Nothing leaves.</span></div>
         </div>
 
         <section className="section" id="included">
           <div className="section-heading">
             <div>
-              <span className="section-label">Quadra-Seer Sovereign / open source</span>
+              <span className="section-label">Quadra-Seer Sovereign / local-first</span>
               <h2 className="section-title">What you get.</h2>
             </div>
             <p className="section-note">Free forever. The whole system, running on hardware you own.</p>
@@ -170,9 +165,9 @@ export default function QuadraSeerPage() {
           <div className="console-intro">
             <span className="console-mark" aria-hidden="true">...</span>
             <p>
-              No license server. No activation key. No account. You clone the repository, build it on your own hardware, and it runs — fully offline, with no recurring checks and no telemetry. If Axiom Zeta disappeared tomorrow, your system would keep running, and the source would still be yours to fork.
+              No license server. No activation key. No account. You install it on your own hardware, and it runs — fully offline, with no recurring checks and no telemetry. If Axiom Zeta disappeared tomorrow, your system would keep running.
             </p>
-            <span className="console-status">Free software, running on your machine</span>
+            <span className="console-status">Free, running on your machine</span>
           </div>
         </section>
 
@@ -195,9 +190,6 @@ export default function QuadraSeerPage() {
             ))}
           </div>
           <div className="hero-actions" style={{ marginTop: 40 }}>
-            <a className="primary-link" href={sourceRepo} rel="noreferrer" target="_blank">
-              Get the source →
-            </a>
             <a
               className="secondary-link"
               href={`mailto:${supportEmail}?subject=${encodeURIComponent("Quadra-Seer Sovereign — question")}`}
