@@ -180,6 +180,7 @@ export default async function HomePage() {
             href="https://axiom-and-ash.com"
             rel="noreferrer"
             target="_blank"
+            aria-label="Get the book Phase Recursion Ontology ($6.99) at axiom-and-ash.com"
           >
             <div className="featured-experience-image">
               <Image
@@ -191,9 +192,9 @@ export default async function HomePage() {
             </div>
             <div className="featured-experience-copy">
               <span className="section-label">Axiom and Ash</span>
-              <h3>Transcendental Prescience</h3>
-              <p>Enter the signal beyond the known.</p>
-              <span className="featured-experience-cta">Visit Transcendental Prescience</span>
+              <h3>Phase Recursion Ontology</h3>
+              <p>A physics philosophy on the shoulders of giants — the book, $6.99.</p>
+              <span className="featured-experience-cta">Get the book</span>
             </div>
           </a>
 
