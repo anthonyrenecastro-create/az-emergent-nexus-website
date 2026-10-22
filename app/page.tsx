@@ -154,7 +154,7 @@ export default async function HomePage() {
               <span className="section-label">Emergent interface / new signal</span>
               <h2 className="section-title">The S.I.G.H.T. Zones.</h2>
             </div>
-            <p className="section-note">Two gateways — the archive and the fiction world. Enter the signal.</p>
+            <p className="section-note">Two gateways — the archive and Quadra Born S.I.G.H.T. Enter the signal.</p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
@@ -181,7 +181,7 @@ export default async function HomePage() {
               href="https://them0deyeseers.com"
               rel="noreferrer"
               target="_blank"
-              aria-label="Enter the fiction world at them0deyeseers.com"
+              aria-label="Enter Quadra Born S.I.G.H.T. at them0deyeseers.com"
             >
               <span className="sight-zone-orbit sight-zone-orbit-outer" aria-hidden="true" />
               <span className="sight-zone-orbit sight-zone-orbit-inner" aria-hidden="true" />
@@ -189,7 +189,7 @@ export default async function HomePage() {
               <span className="sight-zone-axis sight-zone-axis-vertical" aria-hidden="true" />
               <div className="sight-zone-interface">
                 <span>Nexus interface / Fiction</span>
-                <strong>The Fiction<br />World</strong>
+                <strong>Quadra Born<br />S.I.G.H.T.</strong>
                 <em>Enter below</em>
               </div>
             </a>
