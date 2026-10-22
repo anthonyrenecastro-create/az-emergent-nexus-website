@@ -175,6 +175,19 @@ export default async function HomePage() {
             </div>
           </a>
 
+          <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+            <a
+              href="https://them0deyeseers.com"
+              rel="noreferrer"
+              target="_blank"
+              className="experience-pending"
+              style={{ textDecoration: "none" }}
+              aria-label="Enter the fiction world at them0deyeseers.com"
+            >
+              Enter the fiction world -&gt;
+            </a>
+          </div>
+
           <a
             className="featured-experience"
             href="https://axiom-and-ash.com"
