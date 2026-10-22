@@ -4,10 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Quadra-Seer Sovereign — your AI, on your machine",
   description:
-    "Quadra-Seer Sovereign is a private, local-first AI system with persistent memory, powered by your own Ollama. Free — no cloud required, no data leaves your device.",
+    "Quadra-Seer Sovereign is a private, local-first AI system with persistent memory. $77.99 once — yours forever. No cloud required, no data leaves your device.",
 };
 
 const supportEmail = "anthony.castro@axiomzetainnovations.com";
+
+const sovereignUrl = "https://quadra-seer-equalibra-sovereign-stu.vercel.app/";
 
 const included = [
   {
@@ -32,7 +34,7 @@ const included = [
     index: "04",
     title: "Ongoing updates",
     description:
-      "Improvements ship as updates. Rebuild, and your local system keeps getting better — free forever.",
+      "Improvements ship as updates. Your perpetual license covers this version — pay once, own it forever.",
   },
 ];
 
@@ -65,7 +67,7 @@ const faqs = [
   },
   {
     q: "What does it cost?",
-    a: "Nothing. Quadra-Seer is free — no subscription, no license key, no activation server. Download it, run it, keep it.",
+    a: "$77.99, once. A perpetual license for this version — no subscription, ever. Checkout with Stripe, receive your license key and download by email, activate once, and it's yours.",
   },
   {
     q: "Is the source code public?",
@@ -98,21 +100,24 @@ export default function QuadraSeerPage() {
             <h1>Your AI,<br /><span className="hero-highlight">on your machine.</span></h1>
             <p className="hero-lede">
               A private AI system with persistent memory — powered by your own Ollama.
-              Free. No cloud required. No data leaves the device.
+              $77.99 once, yours forever. No cloud required. No data leaves the device.
             </p>
           </div>
           <div className="hero-actions">
+            <a className="primary-link" href={sovereignUrl} rel="noreferrer" target="_blank">
+              Get Sovereign — $77.99
+            </a>
             <a className="secondary-link" href="#included">What&apos;s included</a>
             <a className="secondary-link" href="#requirements">Requirements</a>
           </div>
           <div className="hero-readout" aria-hidden="true">
-            <span>Free forever</span>
-            <span>No account needed</span>
+            <span>One payment</span>
+            <span>No subscription, ever</span>
           </div>
         </section>
 
         <div className="signal-strip">
-          <div className="signal"><strong>01 / Install</strong><span>Free, no sign-up, no key.</span></div>
+          <div className="signal"><strong>01 / Own it</strong><span>$77.99 once. License key and download by email.</span></div>
           <div className="signal"><strong>02 / Run locally</strong><span>One command brings up the whole stack on your machine.</span></div>
           <div className="signal"><strong>03 / Own it</strong><span>Your data, your models, your hardware. Nothing leaves.</span></div>
         </div>
@@ -123,7 +128,7 @@ export default function QuadraSeerPage() {
               <span className="section-label">Quadra-Seer Sovereign / local-first</span>
               <h2 className="section-title">What you get.</h2>
             </div>
-            <p className="section-note">Free forever. The whole system, running on hardware you own.</p>
+            <p className="section-note">One payment. The whole system, running on hardware you own.</p>
           </div>
           <div className="crypto-app-grid" aria-label="What is included">
             {included.map((item) => (
@@ -165,9 +170,9 @@ export default function QuadraSeerPage() {
           <div className="console-intro">
             <span className="console-mark" aria-hidden="true">...</span>
             <p>
-              No license server. No activation key. No account. You install it on your own hardware, and it runs — fully offline, with no recurring checks and no telemetry. If Axiom Zeta disappeared tomorrow, your system would keep running.
+              One activation, then true sovereignty. Your license key is validated once online; after that it runs fully offline, with no recurring checks and no telemetry. If Axiom Zeta disappeared tomorrow, your system would keep running.
             </p>
-            <span className="console-status">Free, running on your machine</span>
+            <span className="console-status">Paid once, running on your machine</span>
           </div>
         </section>
 
