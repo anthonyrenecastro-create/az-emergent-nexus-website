@@ -323,17 +323,28 @@ export default async function HomePage() {
               <strong>Quadra-M.I.N.D. Sight</strong>
               <em className="experience-subtitle">Meditation and inner-sight practice</em>
               <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginTop: 8 }}>
-                A guided meditation companion for crossing beyond the familiar — live on the web and in Play review.
+                A guided meditation companion for crossing beyond the familiar — live on the web and on Google Play.
               </p>
-              <a
-                href="https://quadra-mind-sight.onrender.com"
-                rel="noreferrer"
-                target="_blank"
-                className="experience-pending"
-                style={{ textDecoration: "none" }}
-              >
-                Enter the system -&gt;
-              </a>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+                <a
+                  href="https://quadra-mind-sight.onrender.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="experience-pending"
+                  style={{ textDecoration: "none" }}
+                >
+                  Enter the system -&gt;
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=org.axiomzetainnovations.quadraroundsight"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="experience-pending"
+                  style={{ textDecoration: "none" }}
+                >
+                  Get it on Google Play -&gt;
+                </a>
+              </div>
             </article>
             <article className="experience-destination">
               <span>System / 02</span>
