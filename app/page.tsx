@@ -152,39 +152,46 @@ export default async function HomePage() {
           <div className="section-heading">
             <div>
               <span className="section-label">Emergent interface / new signal</span>
-              <h2 className="section-title">The S.I.G.H.T. Zone.</h2>
+              <h2 className="section-title">The S.I.G.H.T. Zones.</h2>
             </div>
-            <p className="section-note">The archive is live — enter the signal.</p>
+            <p className="section-note">Two gateways — the archive and the fiction world. Enter the signal.</p>
           </div>
 
-          <a
-            className="sight-zone-portal"
-            href="https://them0deyeseer.com"
-            rel="noreferrer"
-            target="_blank"
-            aria-label="Enter The S.I.G.H.T. Zone archive at them0deyeseer.com"
-          >
-            <span className="sight-zone-orbit sight-zone-orbit-outer" aria-hidden="true" />
-            <span className="sight-zone-orbit sight-zone-orbit-inner" aria-hidden="true" />
-            <span className="sight-zone-axis sight-zone-axis-horizontal" aria-hidden="true" />
-            <span className="sight-zone-axis sight-zone-axis-vertical" aria-hidden="true" />
-            <div className="sight-zone-interface">
-              <span>Nexus interface / S.I.G.H.T.</span>
-              <strong>The S.I.G.H.T.<br />Zone</strong>
-              <em>Live / Enter below</em>
-            </div>
-          </a>
-
-          <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
             <a
+              className="sight-zone-portal"
+              href="https://them0deyeseer.com"
+              rel="noreferrer"
+              target="_blank"
+              aria-label="Enter The S.I.G.H.T. Zone archive at them0deyeseer.com"
+            >
+              <span className="sight-zone-orbit sight-zone-orbit-outer" aria-hidden="true" />
+              <span className="sight-zone-orbit sight-zone-orbit-inner" aria-hidden="true" />
+              <span className="sight-zone-axis sight-zone-axis-horizontal" aria-hidden="true" />
+              <span className="sight-zone-axis sight-zone-axis-vertical" aria-hidden="true" />
+              <div className="sight-zone-interface">
+                <span>Nexus interface / Archive</span>
+                <strong>The S.I.G.H.T.<br />Zone</strong>
+                <em>Live / Enter below</em>
+              </div>
+            </a>
+
+            <a
+              className="sight-zone-portal"
               href="https://them0deyeseers.com"
               rel="noreferrer"
               target="_blank"
-              className="experience-pending"
-              style={{ textDecoration: "none" }}
               aria-label="Enter the fiction world at them0deyeseers.com"
             >
-              Enter the fiction world -&gt;
+              <span className="sight-zone-orbit sight-zone-orbit-outer" aria-hidden="true" />
+              <span className="sight-zone-orbit sight-zone-orbit-inner" aria-hidden="true" />
+              <span className="sight-zone-axis sight-zone-axis-horizontal" aria-hidden="true" />
+              <span className="sight-zone-axis sight-zone-axis-vertical" aria-hidden="true" />
+              <div className="sight-zone-interface">
+                <span>Nexus interface / Fiction</span>
+                <strong>The Fiction<br />World</strong>
+                <em>Enter below</em>
+              </div>
             </a>
           </div>
 
