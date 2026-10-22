@@ -204,8 +204,8 @@ export default async function HomePage() {
           >
             <div className="featured-experience-image">
               <Image
-                src="/axiom-and-ash.svg"
-                alt="Axiom and Ash"
+                src="/phase-recursion-ontology.jpg"
+                alt="Phase Recursion Ontology artwork"
                 fill
                 sizes="(max-width: 1240px) 100vw, 1176px"
               />
@@ -277,8 +277,8 @@ export default async function HomePage() {
           >
             <div className="featured-experience-image">
               <Image
-                src="/transcendent-recursion.webp"
-                alt="Transcendent Recursion"
+                src="/living-body-of-work.jpg"
+                alt="Transcendent Recursion artwork"
                 fill
                 sizes="(max-width: 1240px) 100vw, 1176px"
               />
