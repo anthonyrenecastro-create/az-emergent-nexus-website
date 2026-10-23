@@ -12,8 +12,6 @@ const hasShopifyConfiguration = Boolean(
     process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN?.trim()
 );
 
-const upcomingExperiences: { name: string; subtitle: string }[] = [];
-
 const purchasableSystems = [
   {
     name: "Mind Forge",
@@ -62,66 +60,62 @@ const purchasableSystems = [
 ] as const;
 
 const substackLink = "https://substack.com/@anthonycastro33";
-const cryptoApps = [
-  {
-    name: "HyperCross Nexus",
-    description: "Core intelligence and strategy: analyze markets, portfolios, blockchain activity, DeFi, liquidity, risk, and trade setups through an explainable decision process.",
-  },
-  {
-    name: "HyperCross Nexus Arm Xero",
-    description: "The optional execution companion that prepares or executes approved strategies with authorization, position limits, routing, and transaction-level risk controls.",
-  },
-  {
-    name: "Ameterasu HCN Companion",
-    description: "The conversational interface for understanding Nexus analysis, portfolio exposure, signals, opportunities, and risk without acting as an autonomous trading engine.",
-  },
-];
 
-type PhysicsPaper = {
+type Theory = {
   index: string;
   title: string;
-  authors: string;
-  description: string;
-  image?: string;
-  links: { label: string; href: string }[];
+  image: string;
+  points: string[];
+  note?: string;
 };
 
-const physicsPapers: PhysicsPaper[] = [
+const theories: Theory[] = [
   {
     index: "01",
-    title: "Shared physics research",
-    authors: "Anthony Castro + Abby Lane",
-    description: "A growing archive of papers exploring matter, perception, and the structures that connect them.",
-    links: [
-      { label: "Zenodo", href: "https://zenodo.org/search?q=Anthony%20Castro%20Abby%20Lane" },
-      { label: "arXiv", href: "https://arxiv.org/search/?query=Anthony+Castro+Abby+Lane&searchtype=all" },
-      { label: "GitHub repos", href: "https://github.com/search?q=Anthony+Castro+Abby+Lane&type=repositories" },
+    title: "Interplayed Field Theory",
+    image: "/theory-ift.webp",
+    points: [
+      "Unified Field Interactions: IFT connects quantum, classical, and macroscopic dynamics through ten coupled nonlinear PDEs.",
+      "Resonance and Emergence: interacting fields generate coherent structures, synchronized oscillations, and emergent order through nonlinear resonance.",
+      "Geometry and Topology: higher-dimensional structures, tensor coupling, and manifold topology shape how fields evolve and stabilize.",
+      "Cross-Disciplinary Applications: a common mathematical foundation for plasma propulsion, energy transfer, materials, biology, and AI — predictions await experimental validation.",
     ],
   },
   {
     index: "02",
-    title: "Anthony Rene Castro",
-    authors: "Independent research trail",
-    description: "Follow the papers, preprints, and working repositories behind the Nexus line of inquiry.",
-    links: [
-      { label: "Zenodo", href: "https://zenodo.org/search?q=Anthony%20Castro" },
-      { label: "arXiv", href: "https://arxiv.org/search/?query=Anthony+Castro&searchtype=all" },
-      { label: "GitHub repos", href: "https://github.com/search?q=Anthony+Castro&type=repositories" },
+    title: "Helical Recursive Manifold Theory",
+    image: "/theory-hrm.webp",
+    points: [
+      "Unified Computational Architecture: HRM unites information fields, geometry, topology, memory, cognition, and resource management in one adaptive framework.",
+      "Self-Organizing Computation: pathways, structures, memories, and resources reorganize dynamically as demands change.",
+      "Stability and Accountability: every change is tracked; bounded corrections maintain stability and prevent runaway adaptation.",
+      "Scientific Validation: a falsifiable foundation, with controlled experiments testing efficiency, reasoning performance, and resilience.",
     ],
   },
   {
     index: "03",
-    title: "Abby Lane",
-    authors: "Independent research trail",
-    description: "A parallel index for Abby Lane's papers, preprints, and experimental code.",
-    image: "/public.abby-lane.jpg",
-    links: [
-      { label: "Zenodo", href: "https://zenodo.org/search?q=Abby%20Lane" },
-      { label: "arXiv", href: "https://arxiv.org/search/?query=Abby+Lane&searchtype=all" },
-      { label: "GitHub repos", href: "https://github.com/search?q=Abby+Lane&type=repositories" },
+    title: "Hieromath",
+    image: "/theory-hieromath.webp",
+    points: [
+      "Semantic Mathematical Objects: objects carry value, identity, category, relationships, meaning, constraints, and state.",
+      "Conditional Operations: operations governed by semantic compatibility and relational constraints, not just numerical value.",
+      "Transformational Algebra: COUPLE, BIND, INHIBIT, PROJECT, PROPAGATE, and COLLAPSE manipulate structures while checking invariants.",
+      "Intelligent Execution: incompatible operations are rejected before execution; valid transformations propagate and are verified for reproducibility.",
+    ],
+    note: "Central distinction: mathematics operates on quantities and formally defined relationships — its status as a new foundation awaits formal proof and independent validation.",
+  },
+  {
+    index: "04",
+    title: "Multi Model Recursive Multiverse Theory",
+    image: "/theory-mmrm.webp",
+    points: [
+      "Unified Physical Framework: connects quantum mechanics, classical physics, geometry, and information processing through ten coupled nonlinear equations.",
+      "Multiverse Architecture: 22 realities, 12 spatial dimensions, 14 timelines per reality, four branches per timeline — organized recursively.",
+      "Force Projection: fundamental forces emerge as projections of higher-dimensional phenomena, coupled resonantly across scales.",
+      "Applications: explores advances in AI, quantum computing, materials science, and cosmology — predictions require independent validation.",
     ],
   },
-] as const;
+];
 
 export default async function HomePage() {
   let products: Product[] = [];
@@ -184,8 +178,8 @@ export default async function HomePage() {
           </a>
           <div className="hero-actions">
             <a className="primary-link" href="#systems">Explore systems</a>
-            <a className="secondary-link" href="#transcendental-gateways">Transcendental Gateways</a>
-            <a className="secondary-link" href="#coming-soon">Coming soon</a>
+            <a className="secondary-link" href="/quadra-seer">Quadra-Seer Sovereign</a>
+            <a className="secondary-link" href="#seers-console">Seer&apos;s Console</a>
             <a className="secondary-link" href="#access">Access protocol</a>
           </div>
           <div className="hero-readout" aria-hidden="true">
@@ -236,83 +230,73 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section className="section gateway-section" id="transcendental-gateways">
-          <div className="section-heading">
-            <div>
-              <span className="section-label">Nexus interface / gateway signal</span>
-              <h2 className="section-title">Transcendental Gateways</h2>
-            </div>
-            <p className="section-note">A portal for crossing beyond the familiar and entering the next layer of perception.</p>
-          </div>
-
-          <a
-            className="hero-portal gateway-portal"
-            href="https://transcendentalgateways.site"
-            rel="noreferrer"
-            target="_blank"
-            aria-label="Enter Transcendental Gateways"
-          >
-            <span className="portal-stars" />
-            <span className="portal-glow" />
-            <span className="sigil-ring sigil-ring-outer" />
-            <span className="sigil-ring sigil-ring-middle" />
-            <span className="sigil-ring sigil-ring-inner" />
-            <span className="sigil-cross sigil-cross-horizontal" />
-            <span className="sigil-cross sigil-cross-vertical" />
-            <span className="sigil-diamond" />
-            <span className="sigil-petal sigil-petal-one" />
-            <span className="sigil-petal sigil-petal-two" />
-            <span className="sigil-petal sigil-petal-three" />
-            <span className="sigil-petal sigil-petal-four" />
-            <span className="portal-interface">
-              <span className="portal-eyebrow">Nexus Interface</span>
-              <strong>Transcendental<br />Gateways</strong>
-              <span className="portal-status">Ready / Enter below</span>
-            </span>
-            <span className="portal-label">Enter Gateway</span>
-          </a>
-        </section>
-
         <section className="section" id="systems">
           <div className="section-heading">
             <div>
               <span className="section-label">Emergent interface / new signal</span>
-              <h2 className="section-title">The S.I.G.H.T. Zone.</h2>
+              <h2 className="section-title">The S.I.G.H.T. Zones.</h2>
             </div>
-            <p className="section-note">A new portal is taking shape. Access coordinates will be established next.</p>
+            <p className="section-note">Two gateways — the archive and Quadra Born S.I.G.H.T. Enter the signal.</p>
           </div>
 
-          <div className="sight-zone-portal" aria-label="The S.I.G.H.T. Zone portal is awaiting access coordinates">
-            <span className="sight-zone-orbit sight-zone-orbit-outer" aria-hidden="true" />
-            <span className="sight-zone-orbit sight-zone-orbit-inner" aria-hidden="true" />
-            <span className="sight-zone-axis sight-zone-axis-horizontal" aria-hidden="true" />
-            <span className="sight-zone-axis sight-zone-axis-vertical" aria-hidden="true" />
-            <div className="sight-zone-interface">
-              <span>Nexus interface / S.I.G.H.T.</span>
-              <strong>The S.I.G.H.T.<br />Zone</strong>
-              <em>Coordinates pending</em>
-            </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+            <a
+              className="sight-zone-portal"
+              href="https://them0deyeseer.com"
+              rel="noreferrer"
+              target="_blank"
+              aria-label="Enter The S.I.G.H.T. Zone archive at them0deyeseer.com"
+            >
+              <span className="sight-zone-orbit sight-zone-orbit-outer" aria-hidden="true" />
+              <span className="sight-zone-orbit sight-zone-orbit-inner" aria-hidden="true" />
+              <span className="sight-zone-axis sight-zone-axis-horizontal" aria-hidden="true" />
+              <span className="sight-zone-axis sight-zone-axis-vertical" aria-hidden="true" />
+              <div className="sight-zone-interface">
+                <span>Nexus interface / Archive</span>
+                <strong>The S.I.G.H.T.<br />Zone</strong>
+                <em>Live / Enter below</em>
+              </div>
+            </a>
+
+            <a
+              className="sight-zone-portal"
+              href="https://them0deyeseers.com"
+              rel="noreferrer"
+              target="_blank"
+              aria-label="Enter Quadra Born S.I.G.H.T. at them0deyeseers.com"
+            >
+              <span className="sight-zone-orbit sight-zone-orbit-outer" aria-hidden="true" />
+              <span className="sight-zone-orbit sight-zone-orbit-inner" aria-hidden="true" />
+              <span className="sight-zone-axis sight-zone-axis-horizontal" aria-hidden="true" />
+              <span className="sight-zone-axis sight-zone-axis-vertical" aria-hidden="true" />
+              <div className="sight-zone-interface">
+                <span>Nexus interface / Fiction</span>
+                <strong>Quadra Born<br />S.I.G.H.T.</strong>
+                <em>Enter below</em>
+              </div>
+            </a>
           </div>
 
           <a
             className="featured-experience"
-            href="https://transcendentalprescience.com"
+            href="https://axiom-and-ash.com"
             rel="noreferrer"
             target="_blank"
+            aria-label="Get the book Phase Recursion Ontology ($6.99) at axiom-and-ash.com"
           >
             <div className="featured-experience-image">
               <Image
-                src="/axiom-and-ash.svg"
-                alt="Axiom and Ash"
+                src="/phase-recursion-ontology.jpg"
+                alt="Phase Recursion Ontology artwork"
                 fill
                 sizes="(max-width: 1240px) 100vw, 1176px"
               />
             </div>
             <div className="featured-experience-copy">
               <span className="section-label">Axiom and Ash</span>
-              <h3>Transcendental Prescience</h3>
-              <p>Enter the signal beyond the known.</p>
-              <span className="featured-experience-cta">Visit Transcendental Prescience</span>
+              <h3>Phase Recursion Ontology</h3>
+              <p>A physics philosophy on the shoulders of giants — the book, $6.99.</p>
+              <span className="featured-experience-cta">Get the book</span>
             </div>
           </a>
 
@@ -358,82 +342,132 @@ export default async function HomePage() {
           </div>
         </section>
 
+        <section className="section" id="transcendent-recursion">
+          <div className="section-heading">
+            <div>
+              <span className="section-label">Emergent interface / creative signal</span>
+              <h2 className="section-title">Transcendent Recursion.</h2>
+            </div>
+            <p className="section-note">A multiverse in progress — books, sound, physics, and transmissions from the edge of the known self.</p>
+          </div>
+
+          <a
+            className="featured-experience"
+            href="https://transcendentrecursion.online"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div className="featured-experience-image">
+              <Image
+                src="/living-body-of-work.jpg"
+                alt="Transcendent Recursion artwork"
+                fill
+                sizes="(max-width: 1240px) 100vw, 1176px"
+              />
+            </div>
+            <div className="featured-experience-copy">
+              <span className="section-label">The Transcendent Recursion</span>
+              <h3>A living body of work</h3>
+              <p>There is no outside. A story that keeps unfolding — into a novel, a score, a theory of everything, and a map back to the source.</p>
+              <span className="featured-experience-cta">Visit Transcendent Recursion</span>
+            </div>
+          </a>
+        </section>
+
         <section className="section seers-console" id="seers-console">
           <div className="section-heading">
             <div>
               <span className="section-label">Research archive / active signal</span>
               <h2 className="section-title">The Seer&apos;s Console</h2>
             </div>
-            <p className="section-note">Physics papers, preprints, and the code that lets the questions keep moving.</p>
+            <p className="section-note">Theoretical frameworks behind the Nexus line of inquiry.</p>
           </div>
 
           <div className="console-intro">
             <span className="console-mark" aria-hidden="true">...</span>
-            <p>Anthony Castro and Abby Lane / a shared observatory for the work behind the signal.</p>
+            <p>Anthony Castro / a shared observatory for the work behind the signal.</p>
             <span className="console-status">Index / live</span>
           </div>
 
-          <div className="paper-grid" aria-label="Physics paper archive">
-            {physicsPapers.map((paper) => (
-              <article className="paper-card" key={paper.index}>
+          <div className="theory-grid" aria-label="Theoretical frameworks">
+            {theories.map((theory) => (
+              <article className="paper-card theory-card" key={theory.index}>
                 <div className="paper-card-top">
-                  <span className="paper-index">Paper / {paper.index}</span>
-                  <span className="paper-status">Archive link</span>
+                  <span className="paper-index">Theory / {theory.index}</span>
                 </div>
-                <h3>{paper.title}</h3>
-                {paper.image && (
-                  <div className="paper-author-image">
-                    <Image src={paper.image} alt={`${paper.title} portrait`} fill sizes="(max-width: 720px) 100vw, 33vw" />
-                  </div>
-                )}
-                <p className="paper-authors">{paper.authors}</p>
-                <p className="paper-description">{paper.description}</p>
-                <div className="paper-links">
-                  {paper.links.map((link) => (
-                    <a href={link.href} key={link.label} rel="noreferrer" target="_blank">
-                      <span>{link.label}</span>
-                      <span aria-hidden="true">-&gt;</span>
-                    </a>
+                <div className="theory-image">
+                  <Image src={theory.image} alt={`${theory.title} artwork`} fill sizes="(max-width: 720px) 100vw, 25vw" />
+                </div>
+                <h3>{theory.title}</h3>
+                <ol className="theory-points">
+                  {theory.points.map((point, i) => (
+                    <li key={i}>{point}</li>
                   ))}
-                </div>
+                </ol>
+                {theory.note && <p className="theory-note">{theory.note}</p>}
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section coming-soon" id="coming-soon">
+        <section className="section live-systems" id="live-systems">
           <div className="section-heading">
             <div>
-              <span className="section-label">Systems in development</span>
-              <h2 className="section-title">Coming soon.</h2>
+              <span className="section-label">Active systems / live signal</span>
+              <h2 className="section-title">Live now.</h2>
             </div>
-            <p className="section-note">Experiences and applications preparing for their next access window.</p>
+            <p className="section-note">Shipped applications, running in the open. Enter and use them.</p>
           </div>
 
-          {upcomingExperiences.length > 0 && (
-          <div className="experience-destinations" aria-label="Experiences coming soon">
-            {upcomingExperiences.map((experience, index) => (
-              <article className="experience-destination" key={experience.name}>
-                <span>Experience / {String(index + 1).padStart(2, "0")}</span>
-                <strong>{experience.name}</strong>
-                <em className="experience-subtitle">{experience.subtitle}</em>
-                <span className="experience-pending">Coming Soon</span>
-              </article>
-            ))}
-          </div>
-          )}
-
-          <div className="crypto-app-grid" aria-label="HyperCross applications coming soon">
-            {cryptoApps.map((app, index) => (
-              <article className="crypto-app" key={app.name}>
-                <span className="product-index">HyperCross / {String(index + 1).padStart(2, "0")}</span>
-                <h3>{app.name}</h3>
-                <p>{app.description}</p>
-                <span className="crypto-app-pending">Coming Soon</span>
-              </article>
-            ))}
+          <div className="experience-destinations" aria-label="Live applications">
+            <article className="experience-destination">
+              <span>System / 01</span>
+              <strong>Quadra-M.I.N.D. Sight</strong>
+              <em className="experience-subtitle">Meditation and inner-sight practice</em>
+              <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginTop: 8 }}>
+                A guided meditation companion for crossing beyond the familiar — live on the web and on Google Play.
+              </p>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+                <a
+                  href="https://quadra-mind-sight.onrender.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="experience-pending"
+                  style={{ textDecoration: "none" }}
+                >
+                  Enter the system -&gt;
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=org.axiomzetainnovations.quadraroundsight"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="experience-pending"
+                  style={{ textDecoration: "none" }}
+                >
+                  Get it on Google Play -&gt;
+                </a>
+              </div>
+            </article>
+            <article className="experience-destination">
+              <span>System / 02</span>
+              <strong>EqualiF.I. Planner</strong>
+              <em className="experience-subtitle">Financial independence planning</em>
+              <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginTop: 8 }}>
+                A focused tool for mapping the path to financial independence — clear numbers, no noise.
+              </p>
+              <a
+                href="https://equalifi-planner.vercel.app"
+                rel="noreferrer"
+                target="_blank"
+                className="experience-pending"
+                style={{ textDecoration: "none" }}
+              >
+                Enter the system -&gt;
+              </a>
+            </article>
           </div>
         </section>
+
       </main>
       <footer className="site-footer">AZ Emergent Nexus / Cognitive systems for the next version of you</footer>
     </div>
