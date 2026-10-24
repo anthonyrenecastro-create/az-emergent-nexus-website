@@ -53,7 +53,7 @@ const purchasableSystems = [
       "Find your Financial Independence number: FI calculation, debt-payoff modeling, cash-flow budgeting, and retirement projections.",
     price: "$11.99",
     priceNote: "USD / month · 7-day free trial",
-    status: "In review on Google Play",
+    status: "Live on Google Play",
     href: "https://play.google.com/store/apps/details?id=org.axiomzetainnovations.financialindependence",
     cta: "Google Play",
   },
