@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const supportEmail = "anthony.castro@axiomzetainnovations.com";
 
-const sovereignUrl = "https://quadra-seer-equalibra-sovereign-stu.vercel.app/";
+const sovereignUrl = "https://github.com/axiomzeta/quadra-seer-equalibra-sovereign";
 
 const included = [
   {
