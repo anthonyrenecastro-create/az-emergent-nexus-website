@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: "Is the source code public?",
-    a: "No — Quadra-Seer is proprietary software. You receive the complete working system; the source stays with Axiom Zeta.",
+    a: "Yes — Quadra-Seer is open source under the GNU AGPL-3.0. You receive the complete working system, source included; the code is public on GitHub under the Axiom Zeta organization.",
   },
 ];
 
