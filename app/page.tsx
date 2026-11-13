@@ -29,8 +29,8 @@ const purchasableSystems = [
     edition: "Sovereign reasoning system",
     description:
       "Sovereign reasoning system — balanced, auditable, and built to be inspected.",
-    price: "Licensed",
-    priceNote: "Sovereign edition",
+    price: "Free",
+    priceNote: "Open source · AGPL-3.0",
     status: "Available now",
     href: "https://github.com/axiomzeta/quadra-seer-equalibra-sovereign",
     cta: "View system",
@@ -40,8 +40,8 @@ const purchasableSystems = [
     edition: "Cognitive training rounds",
     description:
       "Structured cognitive rounds for attention, memory, and mental agility — the M.I.N.D.S. practice system, live on Google Play.",
-    price: "$14.99",
-    priceNote: "USD / month · 7-day free trial",
+    price: "Free",
+    priceNote: "Free download",
     status: "Live on Google Play",
     href: "https://play.google.com/store/apps/details?id=org.axiomzetainnovations.quadraroundsight",
     cta: "Google Play",
@@ -202,7 +202,7 @@ export default async function HomePage() {
               <span className="section-label">Available now / subscriptions</span>
               <h2 className="section-title">Purchasable systems.</h2>
             </div>
-            <p className="section-note">Full access by subscription. Every app subscription starts with a 7-day free trial.</p>
+            <p className="section-note">Free systems and subscriptions — every paid subscription starts with a 7-day free trial.</p>
           </div>
 
           <div className="product-grid">
