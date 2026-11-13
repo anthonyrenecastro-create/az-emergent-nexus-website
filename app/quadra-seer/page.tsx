@@ -109,6 +109,7 @@ export default function QuadraSeerPage() {
             </a>
             <a className="secondary-link" href="#included">What&apos;s included</a>
             <a className="secondary-link" href="#requirements">Requirements</a>
+              <a className="secondary-link" href="/donate">Support the research</a>
           </div>
           <div className="hero-readout" aria-hidden="true">
             <span>Free forever</span>
