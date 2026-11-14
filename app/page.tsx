@@ -25,6 +25,17 @@ const purchasableSystems = [
     cta: "Google Play",
   },
   {
+    name: "NOESIS",
+    edition: "Visual Consciousness Exploration Engine",
+    description:
+      "Visual consciousness exploration engine: generative mathematics and procedural shaders for meditation, relaxation, and the study of perception.",
+    price: "$15.99",
+    priceNote: "USD / month · 7-day free trial",
+    status: "Now publishing on Google Play",
+    href: "https://play.google.com/store/apps/details?id=com.axiomzetainnovations.noesis",
+    cta: "Google Play",
+  },
+  {
     name: "Quadra-Seer",
     edition: "Sovereign reasoning system",
     description:
