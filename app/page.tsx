@@ -18,8 +18,8 @@ const purchasableSystems = [
     edition: "Convergence Form Extractor",
     description:
       "AI-assisted creativity studio: guided divergent-thinking exercises, a diagnostic creativity assessment, live cognitive telemetry, and a verification ledger for assessed sessions.",
-    price: "$14.99",
-    priceNote: "USD / month · 7-day free trial",
+    price: "Free",
+    priceNote: "Free download",
     status: "Now publishing on Google Play",
     href: "https://play.google.com/store/apps/details?id=com.axiomzetainnovations.convergenceform",
     cta: "Google Play",
