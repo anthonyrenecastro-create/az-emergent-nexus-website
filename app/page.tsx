@@ -54,8 +54,8 @@ const purchasableSystems = [
     edition: "Cognitive training rounds",
     description:
       "Structured cognitive rounds for attention, memory, and mental agility — the M.I.N.D.S. practice system, live on Google Play.",
-    price: "Free",
-    priceNote: "Free download",
+    price: "$10.99",
+    priceNote: "USD / month · 7-day free trial",
     status: "Live on Google Play",
     href: "https://play.google.com/store/apps/details?id=org.axiomzetainnovations.quadraroundsight",
     cta: "Google Play",
