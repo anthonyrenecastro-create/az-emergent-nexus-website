@@ -448,7 +448,7 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
 
 @media (max-width: 1120px) {
   .hero { min-height: 900px; }
-  .hero-copy { left: 50%; text-align: center; top: 120px; transform: translateX(-50%); width: calc(100% - 40px); }
+  .hero-copy { left: 20px; right: 20px; max-width: none; text-align: center; top: 120px; width: auto; }
   .hero-copy h1 { font-size: 3.8rem; }
   .hero-lede { margin-left: auto; margin-right: auto; }
   .hero-portal { height: min(78vw, 580px); top: 54%; width: min(78vw, 580px); }
