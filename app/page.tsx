@@ -23,6 +23,7 @@ const purchasableSystems = [
     status: "Now publishing on Google Play",
     href: "https://play.google.com/store/apps/details?id=com.axiomzetainnovations.convergenceform",
     cta: "Google Play",
+    webHref: undefined,
   },
   {
     name: "NOESIS",
@@ -34,6 +35,7 @@ const purchasableSystems = [
     status: "Now publishing on Google Play",
     href: "https://play.google.com/store/apps/details?id=com.axiomzetainnovations.noesis",
     cta: "Google Play",
+    webHref: undefined,
   },
   {
     name: "Quadra-Seer",
@@ -45,6 +47,7 @@ const purchasableSystems = [
     status: "Available now",
     href: "https://github.com/axiomzeta/quadra-seer-equalibra-sovereign",
     cta: "View system",
+    webHref: undefined,
   },
   {
     name: "Quadra-M.I.N.D. Sight",
@@ -56,6 +59,7 @@ const purchasableSystems = [
     status: "Live on Google Play",
     href: "https://play.google.com/store/apps/details?id=org.axiomzetainnovations.quadraroundsight",
     cta: "Google Play",
+    webHref: "https://quadra-mind-sight.onrender.com",
   },
   {
     name: "EqualiF.I. Planner",
@@ -67,6 +71,7 @@ const purchasableSystems = [
     status: "Live on Google Play",
     href: "https://play.google.com/store/apps/details?id=org.axiomzetainnovations.financialindependence",
     cta: "Google Play",
+    webHref: "https://equalifi-planner.vercel.app",
   },
 ] as const;
 
@@ -228,6 +233,11 @@ export default async function HomePage() {
                   <p className="product-edition">{system.edition}</p>
                   <p className="product-description">{system.description}</p>
                   <span className="status-chip">{system.status}</span>
+                  {system.webHref && (
+                    <a className="experience-link" href={system.webHref} rel="noreferrer" target="_blank">
+                      Enter the system -&gt;
+                    </a>
+                  )}
                   <div className="product-bottom">
                     <span className="price">
                       {system.price} <small>{system.priceNote}</small>
@@ -419,64 +429,6 @@ export default async function HomePage() {
                 {theory.note && <p className="theory-note">{theory.note}</p>}
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="section live-systems" id="live-systems">
-          <div className="section-heading">
-            <div>
-              <span className="section-label">Active systems / live signal</span>
-              <h2 className="section-title">Live now.</h2>
-            </div>
-            <p className="section-note">Shipped applications, running in the open. Enter and use them.</p>
-          </div>
-
-          <div className="experience-destinations" aria-label="Live applications">
-            <article className="experience-destination">
-              <span>System / 01</span>
-              <strong>Quadra-M.I.N.D. Sight</strong>
-              <em className="experience-subtitle">Meditation and inner-sight practice</em>
-              <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginTop: 8 }}>
-                A guided meditation companion for crossing beyond the familiar — live on the web and on Google Play.
-              </p>
-              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
-                <a
-                  href="https://quadra-mind-sight.onrender.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="experience-pending"
-                  style={{ textDecoration: "none" }}
-                >
-                  Enter the system -&gt;
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=org.axiomzetainnovations.quadraroundsight"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="experience-pending"
-                  style={{ textDecoration: "none" }}
-                >
-                  Get it on Google Play -&gt;
-                </a>
-              </div>
-            </article>
-            <article className="experience-destination">
-              <span>System / 02</span>
-              <strong>EqualiF.I. Planner</strong>
-              <em className="experience-subtitle">Financial independence planning</em>
-              <p style={{ color: "var(--muted)", fontSize: "0.9rem", marginTop: 8 }}>
-                A focused tool for mapping the path to financial independence — clear numbers, no noise.
-              </p>
-              <a
-                href="https://equalifi-planner.vercel.app"
-                rel="noreferrer"
-                target="_blank"
-                className="experience-pending"
-                style={{ textDecoration: "none" }}
-              >
-                Enter the system -&gt;
-              </a>
-            </article>
           </div>
         </section>
 
