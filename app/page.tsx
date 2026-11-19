@@ -192,6 +192,9 @@ export default async function HomePage() {
             </span>
             <span className="portal-label">Initialize Nexus</span>
           </a>
+          <a className="hero-brainz" href="https://www.brainzmagazine.com/executive-contributor/anthony-castro" target="_blank" rel="noreferrer" aria-label="Anthony Castro, Executive Contributor at Brainz Magazine">
+            <img src="/brainz-logo.png" alt="Brainz Magazine" width="1500" height="247" />
+          </a>
           <div className="hero-actions">
             <a className="primary-link" href="#systems">Explore systems</a>
             <a className="secondary-link" href="/donate">Support the research</a>
