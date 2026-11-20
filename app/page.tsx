@@ -24,6 +24,7 @@ const purchasableSystems = [
     href: "https://play.google.com/store/apps/details?id=com.axiomzetainnovations.convergenceform",
     cta: "Google Play",
     webHref: undefined,
+    image: "/mind-forge.jpg",
   },
   {
     name: "NOESIS",
@@ -36,6 +37,7 @@ const purchasableSystems = [
     href: "https://play.google.com/store/apps/details?id=com.axiomzetainnovations.noesis",
     cta: "Google Play",
     webHref: undefined,
+    image: "/noesis.jpg",
   },
   {
     name: "Quadra-Seer",
@@ -48,6 +50,7 @@ const purchasableSystems = [
     href: "https://github.com/axiomzeta/quadra-seer-equalibra-sovereign",
     cta: "View system",
     webHref: undefined,
+    image: "/quadra-seer.jpg",
   },
   {
     name: "Quadra-M.I.N.D. Sight",
@@ -60,6 +63,7 @@ const purchasableSystems = [
     href: "https://play.google.com/store/apps/details?id=org.axiomzetainnovations.quadraroundsight",
     cta: "Google Play",
     webHref: "https://quadra-mind-sight.onrender.com",
+    image: "/quadra-mind-sight.png",
   },
   {
     name: "EqualiF.I. Planner",
@@ -72,6 +76,7 @@ const purchasableSystems = [
     href: "https://play.google.com/store/apps/details?id=org.axiomzetainnovations.financialindependence",
     cta: "Google Play",
     webHref: "https://equalifi-planner.vercel.app",
+    image: "/equalifi-planner.png",
   },
 ] as const;
 
@@ -228,7 +233,11 @@ export default async function HomePage() {
             {purchasableSystems.map((system, index) => (
               <article className="product-card" key={system.name}>
                 <div className="product-visual">
-                  <span className="product-visual-empty">System / {String(index + 1).padStart(2, "0")}</span>
+                  {system.image ? (
+                    <Image src={system.image} alt={`${system.name} artwork`} fill sizes="(max-width: 720px) 100vw, 33vw" />
+                  ) : (
+                    <span className="product-visual-empty">System / {String(index + 1).padStart(2, "0")}</span>
+                  )}
                 </div>
                 <div className="product-info">
                   <span className="product-index">Subscription / {String(index + 1).padStart(2, "0")}</span>
