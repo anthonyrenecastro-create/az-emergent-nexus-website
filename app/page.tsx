@@ -177,7 +177,7 @@ export default async function HomePage() {
             <h1>Enter the<br /><span className="hero-highlight">nexus.</span></h1>
             <p className="hero-lede">Cognitive systems for the next version of you.</p>
           </div>
-          <a className="hero-portal" href={substackLink} rel="noreferrer" target="_blank" aria-label="Enter The Singularity Point">
+          <a className="hero-portal hero-portal--side" href={substackLink} rel="noreferrer" target="_blank" aria-label="Enter The Singularity Point">
             <span className="portal-stars" />
             <span className="portal-glow" />
             <span className="sigil-ring sigil-ring-outer" />
@@ -196,6 +196,9 @@ export default async function HomePage() {
               <span className="portal-status">Ready / Enter below</span>
             </span>
             <span className="portal-label">Initialize Nexus</span>
+          </a>
+          <a className="hero-axiom" href="https://axiomzetainnovations.com" target="_blank" rel="noreferrer" aria-label="Axiom Zeta Innovations — visit axiomzetainnovations.com">
+            <img src="/axiom-zeta-logo.png" alt="Axiom Zeta Innovations" width="500" height="500" />
           </a>
           <a className="hero-brainz" href="https://www.brainzmagazine.com/executive-contributor/anthony-castro" target="_blank" rel="noreferrer" aria-label="Anthony Castro, Executive Contributor at Brainz Magazine">
             <img src="/brainz-logo.png" alt="Brainz Magazine" width="1500" height="247" />

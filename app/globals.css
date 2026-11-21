@@ -156,6 +156,15 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
 .portal-label { bottom: 6%; color: var(--gold-bright); font-family: 'DM Mono', monospace; font-size: 9px; left: 50%; letter-spacing: .16em; position: absolute; text-transform: uppercase; transform: translateX(-50%); white-space: nowrap; z-index: 5; }
 .hero-portal:hover .portal-interface, .hero-portal:focus-visible .portal-interface { box-shadow: 0 0 70px rgba(242,178,51,.5), 0 0 120px rgba(157,92,255,.35), inset 0 2px 8px rgba(255,255,255,.3); }
 .hero-portal:hover .portal-label, .hero-portal:focus-visible .portal-label { color: #fff; }
+/* center Axiom Zeta logo: circular, linked to the LLC site */
+.hero-axiom { animation: interface-fade .8s .35s both, sigil-breathe 7s ease-in-out infinite; border-radius: 50%; display: block; height: min(67vw, 650px); left: 50%; position: absolute; top: 51%; transform: translate(-50%, -50%); width: min(67vw, 650px); z-index: 3; }
+.hero-axiom img { border-radius: 50%; box-shadow: 0 0 60px rgba(242,178,51,.28), 0 0 120px rgba(157,92,255,.28); display: block; height: 100%; object-fit: cover; transition: box-shadow .4s ease; width: 100%; }
+.hero-axiom:hover img, .hero-axiom:focus-visible img { box-shadow: 0 0 80px rgba(242,178,51,.5), 0 0 150px rgba(157,92,255,.42); }
+/* relocated portal: small sigil orb under the Brainz logo */
+.hero-portal--side { height: min(22vw, 220px); left: auto; right: 40px; top: calc(51% + 64px); transform: none; width: min(22vw, 220px); }
+.hero-portal--side .portal-interface { height: 44%; width: 44%; }
+.hero-portal--side .portal-interface strong { font-size: clamp(11px, 1.2vw, 14px); margin: 6px 0; }
+.hero-portal--side .portal-eyebrow, .hero-portal--side .portal-status { display: none; }
 .hero-brainz { animation: interface-fade .8s .5s both; display: block; position: absolute; right: 40px; top: 51%; transform: translateY(-50%); width: min(23vw, 315px); z-index: 4; }
 .hero-brainz img { display: block; filter: drop-shadow(0 8px 26px rgba(0, 0, 0, .5)); height: auto; transition: filter .3s ease; width: 100%; }
 .hero-brainz:hover img, .hero-brainz:focus-visible img { filter: drop-shadow(0 0 24px rgba(242, 178, 51, .5)); }
@@ -445,21 +454,25 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
 /* ---- motion + responsive ---- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-copy, .hero-actions, .hero-readout, .hero-brainz, .hero-portal, .hero-portal::before, .hero-portal::after, .orbit-path, .sigil-ring, .sight-zone-orbit, .nav-status::before, .console-status::before { animation: none; }
+  .hero-copy, .hero-actions, .hero-readout, .hero-brainz, .hero-portal, .hero-axiom, .hero-portal::before, .hero-portal::after, .orbit-path, .sigil-ring, .sight-zone-orbit, .nav-status::before, .console-status::before { animation: none; }
   .experience-destination, .crypto-app, .product-visual img, .featured-experience, .paper-card, .sight-zone-portal { transition: none; }
 }
 
 @media (max-width: 1340px) {
   .hero-brainz { right: 30px; width: 215px; }
+  .hero-portal--side { right: 30px; }
 }
 
 @media (max-width: 1120px) {
-  .hero { min-height: 1030px; }
+  .hero { min-height: 1260px; }
   .hero-copy { left: 20px; right: 20px; max-width: none; text-align: center; top: 120px; width: auto; }
   .hero-copy h1 { font-size: 3.8rem; }
   .hero-lede { margin-left: auto; margin-right: auto; }
   .hero-portal { height: min(78vw, 580px); top: 54%; width: min(78vw, 580px); }
-  .hero-brainz { left: 50%; right: auto; top: calc(54% + min(39vw, 290px) + 22px); transform: translateX(-50%); width: min(64vw, 330px); }
+  .hero-axiom { height: min(70vw, 460px); top: 50%; width: min(70vw, 460px); }
+  .hero-portal--side { height: min(52vw, 190px); left: 50%; right: auto; top: calc(50% + min(35vw, 230px) + 22px + 54px + 20px); transform: translateX(-50%); width: min(52vw, 190px); }
+  .hero-portal--side .portal-interface, .hero-portal--side .portal-label { display: none; }
+  .hero-brainz { left: 50%; right: auto; top: calc(50% + min(35vw, 230px) + 22px); transform: translateX(-50%); width: min(64vw, 330px); }
   .hero-actions { bottom: 54px; width: calc(100% - 40px); }
   .hero-readout { display: none; }
   .theory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -470,13 +483,15 @@ h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.9rem, 4.3vw, 4.6rem); l
   .site-nav { width: calc(100% - 24px); margin-left: 12px; margin-right: 12px; padding-bottom: 14px; padding-top: 14px; }
   .brand-name { font-size: 11px; }
   .nav-status { display: none; }
-  .hero { min-height: 780px; padding-bottom: 120px; padding-top: 120px; }
+  .hero { min-height: 1120px; padding-bottom: 120px; padding-top: 120px; }
   .hero::before { height: 540px; width: 540px; }
   .hero::after { height: 104vw; top: 52%; width: 104vw; }
   .hero-copy { top: 110px; }
   .hero-copy h1 { font-size: clamp(2.7rem, 14vw, 3.7rem); }
   .hero-lede { font-size: 14px; margin-top: 16px; }
   .hero-portal { height: 92vw; max-height: 430px; max-width: 430px; top: 53%; width: 92vw; }
+  .hero-axiom { height: 92vw; max-height: 430px; max-width: 430px; top: 53%; width: 92vw; }
+  .hero-portal--side { height: min(58vw, 180px); left: 50%; right: auto; top: calc(53% + min(46vw, 215px) + 18px + 41px + 18px); transform: translateX(-50%); width: min(58vw, 180px); }
   .hero-brainz { top: calc(53% + min(46vw, 215px) + 18px); width: min(66vw, 300px); }
   .portal-interface { height: 43%; width: 43%; }
   .orbit-path-one { height: 410px; width: 620px; }
